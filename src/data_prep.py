@@ -2,18 +2,7 @@
 data_prep.py
 Loading and feature engineering for the claim denial prediction task.
 
-Design notes
-------------
-- `service_month` differs in range between claims_history.csv (2024) and
-  current_claims.csv (2025). Using it as a raw categorical would let the model
-  key off the literal year, which does not generalize. We instead extract a
-  cyclical month-of-year signal (sin/cos), which captures seasonality without
-  leaking the year.
-- Engineered "gap" flags directly encode domain logic that a reviewer would
-  reason about (e.g. auth required but not on file), which tends to be far
-  more predictive than the raw component columns individually.
-- All transformations are stateless functions of a single row/column, so
-  there is no risk of leaking information from validation/test into train.
+
 """
 from __future__ import annotations
 

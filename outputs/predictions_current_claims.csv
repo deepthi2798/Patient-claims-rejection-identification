@@ -1,14 +1,16 @@
 claim_id,denial_probability,predicted_denial,risk_tier,top_risk_factors,explanation
-CCLM-00082,0.9495,1,High,total billed amount; documentation appears incomplete or missing; expected payment amount,[NOT GENERATED -- no API key set. See prompt below.]
-CCLM-00087,0.9443,1,High,documentation appears incomplete or missing; submission timing; prior authorization on file,[NOT GENERATED -- no API key set. See prompt below.]
-CCLM-00372,0.923,1,High,prior authorization required but not on file; documentation appears incomplete or missing; payer (P008),[NOT GENERATED -- no API key set. See prompt below.]
-CCLM-00049,0.9107,1,High,prior authorization required but not on file; documentation appears incomplete or missing; referral required but not present,[NOT GENERATED -- no API key set. See prompt below.]
-CCLM-00344,0.9045,1,High,prior authorization required but not on file; documentation appears incomplete or missing; referral on file,[NOT GENERATED -- no API key set. See prompt below.]
-CCLM-00446,0.9026,1,High,documentation appears incomplete or missing; referral on file; expected payment vs. billed amount,[NOT GENERATED -- no API key set. See prompt below.]
-CCLM-00136,0.9003,1,High,total billed amount; documentation appears incomplete or missing; expected payment amount,[NOT GENERATED -- no API key set. See prompt below.]
-CCLM-00285,0.8995,1,High,prior authorization required but not on file; documentation appears incomplete or missing; total billed amount,[NOT GENERATED -- no API key set. See prompt below.]
-CCLM-00259,0.8836,1,High,prior authorization required but not on file; payer (P008); referral required but not present,[NOT GENERATED -- no API key set. See prompt below.]
-CCLM-00213,0.8827,1,High,prior authorization required but not on file; submission timing; payer (P006),[NOT GENERATED -- no API key set. See prompt below.]
+CCLM-00082,0.9495,1,High,total billed amount; documentation appears incomplete or missing; expected payment amount,This claim has a 9
+CCLM-00087,0.9443,1,High,documentation appears incomplete or missing; submission timing; prior authorization on file,This claim has a
+CCLM-00372,0.923,1,High,prior authorization required but not on file; documentation appears incomplete or missing; payer (P008),"Requirements:**
+        1. Ground *"
+CCLM-00049,0.9107,1,High,prior authorization required but not on file; documentation appears incomplete or missing; referral required but not present,This claim has
+CCLM-00344,0.9045,1,High,prior authorization required but not on file; documentation appears incomplete or missing; referral on file,This claim has a high
+CCLM-00446,0.9026,1,High,documentation appears incomplete or missing; referral on file; expected payment vs. billed amount,"Model Output:**
+        *"
+CCLM-00136,0.9003,1,High,total billed amount; documentation appears incomplete or missing; expected payment amount,This claim has a
+CCLM-00285,0.8995,1,High,prior authorization required but not on file; documentation appears incomplete or missing; total billed amount,[ERROR generating explanation: Gemini API rate-limited after all retries]
+CCLM-00259,0.8836,1,High,prior authorization required but not on file; payer (P008); referral required but not present,[ERROR generating explanation: Gemini API rate-limited after all retries]
+CCLM-00213,0.8827,1,High,prior authorization required but not on file; submission timing; payer (P006),[ERROR generating explanation: Gemini API rate-limited after all retries]
 CCLM-00177,0.8748,1,High,prior authorization required but not on file; documentation appears incomplete or missing; payer (P003),
 CCLM-00023,0.8747,1,High,prior authorization required but not on file; documentation appears incomplete or missing; submission timing,
 CCLM-00416,0.8712,1,High,prior authorization required but not on file; visit type (Inpatient); payer type (Commercial),
@@ -78,8 +80,8 @@ CCLM-00317,0.6742,1,High,documentation appears incomplete or missing; prior auth
 CCLM-00139,0.6738,1,High,documentation appears incomplete or missing; prior authorization on file; visit type (Inpatient),
 CCLM-00254,0.673,1,High,documentation appears incomplete or missing; referral on file; visit type (Inpatient),
 CCLM-00385,0.6713,1,High,documentation appears incomplete or missing; payer (P003); prior authorization on file,
-CCLM-00461,0.6711,1,High,prior authorization required but not on file; total billed amount; visit type (Inpatient),
 CCLM-00365,0.6711,1,High,documentation appears incomplete or missing; referral on file; visit type (Inpatient),
+CCLM-00461,0.6711,1,High,prior authorization required but not on file; total billed amount; visit type (Inpatient),
 CCLM-00410,0.6657,1,High,submission timing; prior authorization on file; payer type (Commercial),
 CCLM-00180,0.6643,1,High,documentation appears incomplete or missing; payer (P008); expected payment vs. billed amount,
 CCLM-00455,0.6587,1,High,expected payment vs. billed amount; payer (P008); referral required but not present,
@@ -195,8 +197,8 @@ CCLM-00257,0.51,0,Medium,prior authorization on file; payer (P006); prior author
 CCLM-00025,0.5098,0,Medium,referral required but not present; prior authorization on file; prior authorization requirement,
 CCLM-00404,0.509,0,Medium,expected payment vs. billed amount; prior authorization on file; prior authorization requirement,
 CCLM-00194,0.5089,0,Medium,expected payment vs. billed amount; prior authorization on file; prior authorization requirement,
-CCLM-00199,0.5083,0,Medium,prior authorization on file; payer type (Commercial); referral requirement,
 CCLM-00145,0.5083,0,Medium,visit type (Inpatient); prior authorization requirement; referral requirement,
+CCLM-00199,0.5083,0,Medium,prior authorization on file; payer type (Commercial); referral requirement,
 CCLM-00009,0.5067,0,Medium,expected payment vs. billed amount; payer (P008); prior authorization requirement,
 CCLM-00184,0.5055,0,Medium,visit type (Inpatient); prior authorization requirement; payer type (Commercial),
 CCLM-00354,0.5035,0,Medium,expected payment vs. billed amount; prior authorization requirement; payer type (Commercial),
@@ -230,8 +232,8 @@ CCLM-00412,0.4678,0,Low,submission timing; referral on file; prior authorization
 CCLM-00452,0.4643,0,Low,expected payment vs. billed amount; prior authorization requirement; payer type (Commercial),
 CCLM-00424,0.4631,0,Low,referral on file; submission timing; prior authorization requirement,
 CCLM-00423,0.463,0,Low,prior authorization requirement; payer type (Commercial); expected payment vs. billed amount,
-CCLM-00171,0.4617,0,Low,documentation appears incomplete or missing; prior authorization requirement; referral requirement,
 CCLM-00373,0.4617,0,Low,submission timing; prior authorization on file; visit type (Inpatient),
+CCLM-00171,0.4617,0,Low,documentation appears incomplete or missing; prior authorization requirement; referral requirement,
 CCLM-00418,0.4606,0,Low,prior authorization on file; payer (P006); payer type (Commercial),
 CCLM-00275,0.4603,0,Low,expected payment vs. billed amount; prior authorization on file; visit type (Inpatient),
 CCLM-00178,0.4596,0,Low,expected payment vs. billed amount; payer (P008); prior authorization on file,
@@ -293,8 +295,8 @@ CCLM-00369,0.4076,0,Low,payer (P006); prior authorization requirement; payer typ
 CCLM-00110,0.4067,0,Low,payer (P008); referral on file; prior authorization requirement,
 CCLM-00371,0.4066,0,Low,prior authorization required but not on file; referral requirement; provider out of network for this payer,
 CCLM-00091,0.4038,0,Low,submission timing; referral on file; prior authorization on file,
-CCLM-00109,0.4037,0,Low,expected payment vs. billed amount; prior authorization requirement; payer type (Commercial),
 CCLM-00113,0.4037,0,Low,payer (P006); prior authorization requirement; payer type (Commercial),
+CCLM-00109,0.4037,0,Low,expected payment vs. billed amount; prior authorization requirement; payer type (Commercial),
 CCLM-00430,0.4015,0,Low,prior authorization requirement; referral requirement; provider out of network for this payer,
 CCLM-00349,0.3998,0,Low,prior authorization on file; visit type (Inpatient); expected payment vs. billed amount,
 CCLM-00150,0.3987,0,Low,prior authorization on file; prior authorization requirement; payer type (Commercial),
@@ -321,8 +323,8 @@ CCLM-00181,0.375,0,Low,prior authorization requirement; payer type (Commercial);
 CCLM-00164,0.3747,0,Low,prior authorization on file; payer type (Commercial); payer type (Medicaid MCO),
 CCLM-00183,0.3739,0,Low,referral on file; payer (P006); expected payment vs. billed amount,
 CCLM-00200,0.3737,0,Low,prior authorization on file; visit type (Inpatient); referral requirement,
-CCLM-00227,0.3714,0,Low,prior authorization requirement; payer type (Commercial); referral requirement,
 CCLM-00451,0.3714,0,Low,prior authorization on file; prior authorization requirement; payer type (Commercial),
+CCLM-00227,0.3714,0,Low,prior authorization requirement; payer type (Commercial); referral requirement,
 CCLM-00097,0.3672,0,Low,prior authorization requirement; payer type (Commercial); referral requirement,
 CCLM-00002,0.3638,0,Low,payer (P003); prior authorization on file; submission timing,
 CCLM-00298,0.3638,0,Low,referral on file; prior authorization on file; payer type (Commercial),
@@ -332,8 +334,8 @@ CCLM-00219,0.3612,0,Low,prior authorization requirement; referral requirement; p
 CCLM-00281,0.3606,0,Low,prior authorization requirement; payer type (Commercial); referral requirement,
 CCLM-00172,0.3595,0,Low,prior authorization on file; visit type (Inpatient); total billed amount,
 CCLM-00486,0.3582,0,Low,prior authorization requirement; payer type (Commercial); referral requirement,
-CCLM-00489,0.3568,0,Low,prior authorization requirement; payer type (Commercial); referral requirement,
 CCLM-00249,0.3568,0,Low,payer (P003); prior authorization requirement; referral requirement,
+CCLM-00489,0.3568,0,Low,prior authorization requirement; payer type (Commercial); referral requirement,
 CCLM-00074,0.3552,0,Low,prior authorization requirement; payer type (Commercial); referral requirement,
 CCLM-00245,0.3548,0,Low,prior authorization requirement; payer type (Commercial); referral requirement,
 CCLM-00374,0.3538,0,Low,referral on file; prior authorization requirement; payer type (Commercial),
@@ -384,8 +386,8 @@ CCLM-00069,0.3075,0,Low,payer (P003); prior authorization requirement; referral 
 CCLM-00346,0.3073,0,Low,payer (P003); prior authorization on file; referral requirement,
 CCLM-00131,0.3068,0,Low,prior authorization on file; payer type (Commercial); referral requirement,
 CCLM-00072,0.3053,0,Low,prior authorization requirement; referral requirement; provider out of network for this payer,
-CCLM-00387,0.3044,0,Low,referral required but not present; prior authorization requirement; number of diagnosis codes,
 CCLM-00340,0.3044,0,Low,prior authorization on file; visit type (Inpatient); referral requirement,
+CCLM-00387,0.3044,0,Low,referral required but not present; prior authorization requirement; number of diagnosis codes,
 CCLM-00353,0.3035,0,Low,submission timing; prior authorization on file; referral requirement,
 CCLM-00059,0.3028,0,Low,payer (P003); prior authorization requirement; referral requirement,
 CCLM-00236,0.3019,0,Low,referral on file; prior authorization on file; prior authorization requirement,
@@ -448,8 +450,8 @@ CCLM-00336,0.2387,0,Low,payer (P003); referral on file; prior authorization requ
 CCLM-00111,0.2385,0,Low,prior authorization on file; referral requirement; provider out of network for this payer,
 CCLM-00289,0.2384,0,Low,prior authorization on file; referral requirement; provider out of network for this payer,
 CCLM-00034,0.2363,0,Low,prior authorization on file; visit type (Inpatient); referral requirement,
-CCLM-00356,0.2351,0,Low,prior authorization requirement; referral requirement; provider out of network for this payer,
 CCLM-00029,0.2351,0,Low,prior authorization requirement; referral requirement; claim submitted more than 30 days after service,
+CCLM-00356,0.2351,0,Low,prior authorization requirement; referral requirement; provider out of network for this payer,
 CCLM-00078,0.2337,0,Low,prior authorization requirement; referral requirement; provider out of network for this payer,
 CCLM-00155,0.2308,0,Low,referral on file; prior authorization requirement; provider out of network for this payer,
 CCLM-00264,0.2305,0,Low,prior authorization requirement; referral requirement; provider out of network for this payer,

@@ -7,7 +7,7 @@ its model-derived top_risk_factors.
 
 Setup
 -----
-1. Get a free API key from Google AI Studio: https://aistudio.google.com/apikey
+
 2. export GEMINI_API_KEY="your-key-here"
 3. python src/explain.py --predictions_path outputs/predictions_current_claims.csv \
        --claims_path data/current_claims.csv
@@ -15,20 +15,9 @@ Setup
 Model
 -----
 Defaults to "gemini-flash-latest" (currently resolves to Gemini 3.5 Flash).
-Override with --model if Google renames/deprecates it later -- check
-https://ai.google.dev/gemini-api/docs/models for the current Flash alias.
 
-Design notes
-------------
-- The prompt is deliberately constrained: it is given ONLY the claim's raw
-  field values + the model's top_risk_factors + denial_probability. It is
-  explicitly instructed not to invent facts, to name one concrete action,
-  and to caveat that this is a risk estimate, not a certainty.
-- A worked low-risk claim is included (see `demo_low_risk_claim`) to sanity
-  check that the prompt behaves reasonably when there is little to flag --
-  required by the assessment spec.
-- If GEMINI_API_KEY is not set, the script falls back to printing the exact
-  prompts it would have sent (useful for review / grading without a live key).
+
+
 """
 from __future__ import annotations
 

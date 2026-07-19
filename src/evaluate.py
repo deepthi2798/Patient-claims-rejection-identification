@@ -1,14 +1,7 @@
 """
 evaluate.py
 Evaluates the persisted model on the held-out test split of claims_history.csv.
-Produces:
-  - printed metrics (ROC-AUC, PR-AUC, capture rate & precision at top 25%)
-  - outputs/plots/roc_curve.png
-  - outputs/plots/pr_curve.png
-  - outputs/plots/capture_rate_curve.png   (capture rate vs. % of claims reviewed)
-  - outputs/plots/feature_importance.png
-  - outputs/plots/denial_reason_breakdown.png (error analysis using denial_reason,
-    which is available post-hoc on the test set only, never as a model input)
+
 
 Usage
 -----

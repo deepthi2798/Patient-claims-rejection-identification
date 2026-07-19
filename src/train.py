@@ -1,9 +1,7 @@
 """
 train.py
 Trains a baseline Logistic Regression and an XGBoost classifier on
-claims_history.csv (using the provided train/validation split), compares
-them on the metric that matters for this problem -- denial capture rate
-within the top 25% of claims by risk score -- and persists the winner.
+claims_history.csv 
 
 Usage
 -----

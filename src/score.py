@@ -4,9 +4,6 @@ Scores current_claims.csv with the trained model and produces
 outputs/predictions_current_claims.csv with columns:
   claim_id, denial_probability, predicted_denial, risk_tier, top_risk_factors
 
-top_risk_factors are derived from per-claim SHAP values (local feature
-attribution), translated into human-readable labels via FEATURE_LABELS.
-
 Usage
 -----
 python src/score.py --model_path outputs/model.pkl --data_path data/current_claims.csv
